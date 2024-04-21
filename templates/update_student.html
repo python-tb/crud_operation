@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Page</title>
+</head>
+<body>
+    <h2>Here You can update  Students Data</h2>
+    <form action="/update_student/{{std.id}}" method="post">
+        {%  csrf_token %}
+
+       <label for="">Name:</label>
+       <input type="text" name="name" id="" value="{{std.name}}">
+       <br>
+       <br>
+       <label for="">Age:</label>
+       <input type="number" name="age" id="" value="{{std.age}}">
+       <br>
+       <br>
+
+       <label for="">Course:</label>
+       <input type="text" name="course" id="" value="{{std.course}}">
+       <br>
+       <br>
+       <label for="">Address:</label>
+      <textarea name="address" id="" cols="30" rows="10"> {{std.address}} </textarea>
+       <br>
+       <br>
+       <input type="submit" value="Submit">
+
+
+    </form>
+
+
+</body>
+</html>
